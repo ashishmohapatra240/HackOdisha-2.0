@@ -7,4 +7,6 @@ class GlobalVariables {
   static const callCardColor = Color.fromRGBO(255, 238, 247, 1);
   static const primaryTextColor = Color.fromRGBO(44, 40, 40, 1);
   static const secondaryTextColor = Color.fromRGBO(117, 117, 117, 1);
+    static const borderColor = Color.fromRGBO(232, 232, 232, 1);
+
 }

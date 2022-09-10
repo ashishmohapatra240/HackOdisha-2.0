@@ -39,7 +39,7 @@ class AmbulanceEmergency extends StatelessWidget {
                           color: GlobalVariables.primaryColor,
                         ),
                         Text(
-                          '112',
+                          '102',
                           style: TextStyle(
                               color: GlobalVariables.primaryColor,
                               fontSize: 24,

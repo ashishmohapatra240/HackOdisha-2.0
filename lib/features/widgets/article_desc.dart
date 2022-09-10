@@ -51,7 +51,7 @@ class ArticleDesc extends StatelessWidget {
           ),
           ArticleImage(
               imageStr:
-                  "https://www.unwomen.org/-/media/headquarters/images/sections/news/stories/2017/11/fiji_varanisesemaisamoa_rakirakimarket_1_675pxwide.jpg?la=en&vs=1317"),
+                  "https://article-14.com/uploads/2021/07-July/05-Mon/lg/MSF2.jpg"),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(articles[0][0]),

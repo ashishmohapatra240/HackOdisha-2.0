@@ -59,7 +59,7 @@ class Carousel extends StatelessWidget {
                                 context,
                                 SafeWebView(
                                     index: index,
-                                    title: "You are strong",
+                                    title: "Read Mandakani's story",
                                     url:
                                         "https://www.healthline.com/health/womens-health/self-defense-tips-escape"));
                           }

@@ -1,7 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nirbhaya/features/home/emergency/emergency.dart';
+import 'package:nirbhaya/features/home/quick_search/quick_search.dart';
 import 'package:nirbhaya/features/widgets/carousel.dart';
 import 'package:nirbhaya/global_variables.dart';
 
@@ -47,14 +49,15 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(24.0),
+              padding: const EdgeInsets.only(left: 24.0, top: 16),
               child: RichText(
-                text: const TextSpan(
+                text: TextSpan(
                   text: 'Hey, ',
                   style: TextStyle(
                       fontSize: 30,
                       color: Colors.black,
-                      fontWeight: FontWeight.w600),
+                      fontWeight: FontWeight.bold,
+                      fontFamily: GoogleFonts.raleway().fontFamily),
                   children: <TextSpan>[
                     TextSpan(
                       text: 'Diana Prince',
@@ -65,22 +68,56 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 16,
+            ),
             // Text(
             //   'Hey, Diana Prince',
             //   style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900),
             // ),
-            Carousel(),
+            Padding(
+              padding: const EdgeInsets.only(left: 24),
+              child: RichText(
+                text: TextSpan(
+                  text: 'Some ',
+                  style: TextStyle(
+                      fontSize: 24,
+                      color: GlobalVariables.primaryTextColor,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: GoogleFonts.raleway().fontFamily),
+                  children: const <TextSpan>[
+                    TextSpan(
+                      text: 'superwomen ',
+                      style: TextStyle(
+                          color: GlobalVariables.primaryColor, fontSize: 24),
+                    ),
+                    TextSpan(
+                      text: 'stories',
+                      style: TextStyle(
+                          color: GlobalVariables.primaryTextColor,
+                          fontSize: 24),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             SizedBox(
+              height: 16,
+            ),
+            Carousel(),
+            const SizedBox(
               height: 20,
             ),
-            Padding(
+            const Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Text(
                 'Emergency Numbers',
                 style: TextStyle(
-                    color: GlobalVariables.primaryTextColor,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w600),
+                  color: GlobalVariables.primaryTextColor,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0,
+                ),
               ),
             ),
             SizedBox(
@@ -89,6 +126,25 @@ class _HomeState extends State<Home> {
             Padding(
               padding: const EdgeInsets.fromLTRB(24, 0, 0, 0),
               child: Emergency(),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 24),
+              child: Text(
+                'Quick Search',
+                style: TextStyle(
+                  color: GlobalVariables.primaryTextColor,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 24),
+              child: QuickSearch(),
             ),
           ],
         ),
