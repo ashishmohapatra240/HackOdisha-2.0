@@ -29,9 +29,13 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  carousel_slider: ^4.1.1
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_phone_direct_caller: ^2.1.1
+  flutter_webview_plugin: ^0.4.0
+  google_fonts: ^3.0.1
   page_transition: ^2.0.9
   shared_preferences: ^2.0.15
 

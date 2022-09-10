@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nirbhaya/features/home/home.dart';
 import 'package:nirbhaya/global_variables.dart';
-import 'package:nirbhaya/home.dart';
 import 'package:nirbhaya/myContactsScreen.dart';
 import 'package:nirbhaya/settings.dart';
 
