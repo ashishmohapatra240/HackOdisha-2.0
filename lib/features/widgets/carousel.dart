@@ -41,7 +41,7 @@ class Carousel extends StatelessWidget {
                                 context,
                                 SafeWebView(
                                     index: index,
-                                    title: "Pakistani women inspiring the country",
+                                    title: "Read Mandakani's story",
                                     url:
                                         "https://gulfnews.com/world/asia/pakistan/womens-day-10-pakistani-women-inspiring-the-country-1.77696239"));
                           } else if (index == 1) {
@@ -49,7 +49,7 @@ class Carousel extends StatelessWidget {
                                 context,
                                 SafeWebView(
                                     index: index,
-                                    title: "We have to end Violance",
+                                    title: "Read Kamala's story",
                                     url:
                                         "https://plan-international.org/ending-violence/16-ways-end-violence-girls"));
                           } else if (index == 2) {
@@ -59,7 +59,7 @@ class Carousel extends StatelessWidget {
                                 context,
                                 SafeWebView(
                                     index: index,
-                                    title: "Read Mandakani's story",
+                                    title: "Read Supriya's story",
                                     url:
                                         "https://www.healthline.com/health/womens-health/self-defense-tips-escape"));
                           }

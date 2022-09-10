@@ -59,12 +59,12 @@ class _MyContactsScreenState extends State<MyContactsScreen> {
                       itemCount: snap.data?.length,
                       itemBuilder: (context, index) {
                         return Slidable(
-                          startActionPane: ActionPane(
+                          endActionPane: ActionPane(
                             motion: const ScrollMotion(),
                             children: [
                               SlidableAction(
                                 onPressed: ((context) => {
-                                      // print('Delete');
+                                      print('Delete'),
                                       setState(() {
                                         Fluttertoast.showToast(
                                             msg:
