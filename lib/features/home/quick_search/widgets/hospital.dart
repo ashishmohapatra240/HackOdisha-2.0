@@ -3,8 +3,7 @@ import 'package:nirbhaya/global_variables.dart';
 
 class HospitalCard extends StatelessWidget {
   final Function openMapFunc;
-  const HospitalCard({Key? key, required this.openMapFunc})
-      : super(key: key);
+  const HospitalCard({Key? key, required this.openMapFunc}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +13,7 @@ class HospitalCard extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
+              width: 3,
               color: GlobalVariables.borderColor,
             )),
         child: Padding(

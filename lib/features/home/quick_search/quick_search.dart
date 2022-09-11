@@ -30,7 +30,11 @@ class QuickSearch extends StatelessWidget {
         'https://www.google.com/maps/search/?api=1&query=$location';
 
     try {
-      await launchUrl(Uri.parse(googleUrl));
+      if (await canLaunchUrl(
+        Uri.parse(googleUrl),
+      )) {
+        await launchUrl(Uri.parse(googleUrl));
+      }
     } catch (e) {
       print(e);
       Fluttertoast.showToast(

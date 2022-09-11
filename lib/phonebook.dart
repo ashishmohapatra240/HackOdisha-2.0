@@ -43,6 +43,7 @@ class _PhoneBookState extends State<PhoneBook> {
         _contacts = contacts;
         filteredContacts = _contacts;
       });
+      print(contacts);
     } else {
       _handleInvalidPermissions(permissionStatus);
     }
@@ -138,9 +139,11 @@ class _PhoneBookState extends State<PhoneBook> {
           onChanged: (string) {
             setState(() {
               filteredContacts = _contacts
-                  ?.where((c) => (c.displayName!
-                      .toLowerCase()
-                      .contains(string.toLowerCase())))
+                  ?.where(
+                    (c) => (c.displayName!.toLowerCase().contains(
+                          string.toLowerCase(),
+                        )),
+                  )
                   .toList();
             });
           },

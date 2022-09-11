@@ -12,6 +12,7 @@ class PoliceStationCard extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
+            width: 3,
             color: GlobalVariables.borderColor,
           )),
       child: Padding(
