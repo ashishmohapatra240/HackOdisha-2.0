@@ -180,7 +180,7 @@ class _PhoneBookState extends State<PhoneBook> {
     print(con.phones);
     bool alreadyInList = false;
     for (Contact c in _userSelectedContacts) {
-      print("INside contacts: ID: ${c.displayName}");
+      print("Inside contacts: ID: ${c.displayName}");
       if (c.displayName != null || c.displayName != "") {
         if (c.displayName == con.displayName) {
           alreadyInList = true;

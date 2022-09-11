@@ -49,7 +49,7 @@ class _SafeHomeState extends State<SafeHome> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 5),
       child: InkWell(
         onTap: () {
           showModelSafeHome(getHomeSafeActivated);
@@ -68,8 +68,8 @@ class _SafeHomeState extends State<SafeHome> {
               borderRadius: BorderRadius.circular(20),
             ),
             child: Container(
-              height: 180,
-              width: MediaQuery.of(context).size.width * 0.7,
+              height: 108,
+              width: MediaQuery.of(context).size.width * 0.6,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
               ),
@@ -110,20 +110,23 @@ class _SafeHomeState extends State<SafeHome> {
                             )
                           ],
                         ),
-                        Visibility(
-                          visible: getHomeSafeActivated,
-                          child: Row(
-                            children: [
-                              SpinKitDoubleBounce(
-                                color: GlobalVariables.primaryColor,
-                                size: 15,
-                              ),
-                              SizedBox(width: 15),
-                              Text("Currently Running!",
-                                  style: TextStyle(
-                                      color: GlobalVariables.primaryColor,
-                                      fontSize: 10)),
-                            ],
+                        Padding(
+                          padding: const EdgeInsets.only(left:24.0),
+                          child: Visibility(
+                            visible: getHomeSafeActivated,
+                            child: Row(
+                              children: [
+                                SpinKitDoubleBounce(
+                                  color: GlobalVariables.primaryColor,
+                                  size: 15,
+                                ),
+                                SizedBox(width: 15),
+                                Text("Currently Running!",
+                                    style: TextStyle(
+                                        color: GlobalVariables.primaryColor,
+                                        fontSize: 10)),
+                              ],
+                            ),
                           ),
                         ),
                       ],

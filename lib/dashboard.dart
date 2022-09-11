@@ -9,6 +9,7 @@ import 'package:nirbhaya/settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:permission_handler/permission_handler.dart' as appPermissions;
 import 'package:location/location.dart';
+import 'package:telephony/telephony.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -124,35 +125,42 @@ class _DashboardState extends State<Dashboard> {
                 Icons.add,
               ),
             )
-          : FloatingActionButton(
-              backgroundColor: GlobalVariables.primaryColor,
-              onPressed: () async {
-                if (alerted) {
-                  int pin = (prefs.getInt('pin') ?? -1111);
-                  print('User $pin .');
-                  if (pin == -1111) {
+          : Container(
+              height: 84,
+              width: 84,
+              child: FloatingActionButton(
+                backgroundColor: GlobalVariables.primaryColor,
+                onPressed: () async {
+                  if (alerted) {
+                    int pin = (prefs.getInt('pin') ?? -1111);
+                    print('User $pin .');
                     sendAlertSMS(false);
+                  } else {
+                    sendAlertSMS(true);
                   }
-                } else {
-                  sendAlertSMS(true);
-                }
-              },
-              child: alerted
-                  ? Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        // Image.asset(
-                        //   "assets/alarm.png",
-                        //   height: 24,
-                        // ),
-                        Text("STOP")
-                      ],
-                    )
-                  // : Image.asset(
-                  //     "assets/icons/alert.png",
-                  //     height: 36,
-                  //   ),
-                  : Icon(Icons.emergency)),
+                },
+                child: alerted
+                    ? Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          // Image.asset(
+                          //   "assets/alarm.png",
+                          //   height: 24,
+                          // ),
+                          Text(
+                            "STOP",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, letterSpacing: 0),
+                          )
+                        ],
+                      )
+                    : Image.asset(
+                        "assets/images/sos.png",
+                        height: 28,
+                      ),
+              )
+              // : Icon(Icons.emergency)),
+              ),
     );
   }
 
@@ -255,6 +263,9 @@ class _DashboardState extends State<Dashboard> {
 
         for (int i = 0; i < numbers.length; i++) {
           // sendSMS(numbers[i].split("***")[1], link);
+          Telephony.backgroundInstance.sendSms(
+                    to: numbers[i], message: "Help Me! Track me here.\n$link");
+                    print('sent');
         }
       }
     } on PlatformException catch (e) {
